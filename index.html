@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Ultimate V3.0 – Chargement</title>
+    <style>
+        body {
+            background-color: #07080f;
+            color: #c8cfe8;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.07);
+            border-top: 4px solid #00e5a0;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @animation spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1 {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #00e5a0;
+        }
+        p {
+            color: #5a6180;
+            font-size: 0.9rem;
+        }
+    </style>
+    <script>
+        // METS TON URL DIRECTE HUGGING FACE ICI
+        const HUGGING_FACE_URL = "https://benji4565-osint-ultimate-backend.hf.space";
+
+        window.onload = function() {
+            // Petite tempo de 500ms pour faire joli avec le loader, puis redirection
+            setTimeout(() => {
+                window.location.href = HUGGING_FACE_URL;
+            }, 500);
+        };
+    </script>
+</head>
+<body>
+    <div class="loader"></div>
+    <h1>INITIALISATION D'OSINT ULTIMATE...</h1>
+    <p>Connexion sécurisée au cluster HF en cours</p>
+</body>
+</html>
